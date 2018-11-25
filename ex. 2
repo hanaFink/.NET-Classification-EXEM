@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			//ex.2
+			Console.Write("Please enter  seconds : ");
+			int secondsTotal = Convert.ToInt32(Console.ReadLine());
+			if (secondsTotal>=0)
+			{
+				if (secondsTotal>=86400)
+				{
+					Console.Write(secondsTotal/86400 + " days, ");
+					secondsTotal = secondsTotal % 86400;
+				}
+				if (secondsTotal>=3600 )
+				{
+					Console.Write(secondsTotal / 3600 + " hours, ");
+					secondsTotal = secondsTotal % 3600;
+				}
+				if (secondsTotal>=60)
+				{
+					Console.Write(secondsTotal / 60 + " minuts, ");
+					secondsTotal = secondsTotal % 60;
+
+				}
+				if (secondsTotal>=0)
+				{
+					Console.Write(secondsTotal  + " seconds");
+				}
+				Console.WriteLine();
+			}
+		}
+	}
+}
