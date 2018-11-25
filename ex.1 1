@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			// ex.1.1
+			Console.Write("please enter a number between 0 to 1000: ");
+			int mynumber = Convert.ToInt32(Console.ReadLine());
+			int m = 2;
+			if (mynumber >= 0 && mynumber <= 1000)
+			{
+				while (mynumber % 2 != 0 && mynumber != m)
+				{
+					m++;
+
+				}
+				if (m == mynumber)
+				{
+					Console.WriteLine("This is Prime ");
+				}
+				else
+				{
+					Console.WriteLine("This is NOT a prime ");
+				}
+			}
+		}
+	}
+}
